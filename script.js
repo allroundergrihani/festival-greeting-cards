@@ -1420,6 +1420,14 @@ let pendingSupportAction = null;
 
 function showSupportPopup(action) {
 
+    const supportPopupSeen =
+        localStorage.getItem("supportPopupSeen");
+
+    if (supportPopupSeen === "yes") {
+        action();
+        return;
+    }
+
     pendingSupportAction = action;
 
     const popup =
@@ -1458,6 +1466,9 @@ document.addEventListener("click", function (event) {
         const action =
             pendingSupportAction;
 
+            // Remember that the popup was already shown in this browser
+            localStorage.setItem("supportPopupSeen", "yes");
+            
         const popup =
             document.getElementById(
                 "support-popup"
