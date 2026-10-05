@@ -1,0 +1,2373 @@
+/* ===== BASIC PAGE STYLE ===== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faf6ff;
+    color: #241239;
+}
+
+
+/* ===== TOP HEADER ===== */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #18002e,
+        #650b98
+    );
+
+    color: white;
+    text-align: center;
+
+    padding: 16px 20px;
+}
+
+header h1 {
+    color: #ffdf3e;
+
+    font-size: 36px;
+
+    margin: 0;
+}
+
+header h2 {
+    font-size: 21px;
+
+    margin: 5px 0;
+}
+
+header p {
+    font-size: 15px;
+
+    margin: 5px 0 0;
+}
+
+
+/* ===== MAIN CONTENT ===== */
+
+main {
+    text-align: center;
+    padding: 12px 20px;
+}
+
+main h2 {
+    color: #4b1170;
+
+    font-size: 24px;
+    margin: 10px 0 12px;
+}
+
+/* ===== FESTIVAL BUTTONS ===== */
+
+button {
+    background-color: white;
+
+    color: #4b1170;
+
+    border: 2px solid #650b98;
+
+    border-radius: 12px;
+
+    padding: 15px 25px;
+
+    margin: 8px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ===== BUTTON HOVER ===== */
+
+button:hover {
+    background-color: #650b98;
+
+    color: white;
+}
+
+/* =========================
+   FESTIVAL TABS
+========================= */
+
+.festival-tabs {
+    display: flex;
+    gap: 10px;
+
+    overflow-x: auto;
+
+    padding: 15px 5px;
+
+    margin-bottom: 25px;
+
+    scrollbar-width: thin;
+}
+
+
+   .festival-tab {
+    flex: 0 0 auto;
+
+    min-width: 130px;
+
+    background: white;
+
+    color: #4b1170;
+
+    border: 2px solid #d8c6eb;
+
+    border-radius: 15px;
+
+    padding: 8px 12px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+
+    /* ADD THESE */
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    white-space: nowrap;
+}
+
+
+    .festival-tab:hover {
+        background: #f2e6ff;
+
+        transform: translateY(-2px);
+    }
+
+
+/* Selected festival */
+
+.festival-tab.active {
+
+    background: linear-gradient(
+        135deg,
+        #7713a7,
+        #40006a
+    );
+
+    color: white;
+
+    border-color: #f5ca43;
+}
+
+/* =========================
+   E-CARD AREA
+========================= */
+
+#card-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 20px;
+
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+
+/* Individual card */
+
+.ecard {
+    
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.20);
+
+    overflow: hidden;
+}
+
+
+/* Card image */
+
+.ecard img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 10px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    #card-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    #card-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+        padding: 10px;
+
+    }
+
+}
+/* =========================
+   MESSAGE ON CARD IMAGE
+========================= */
+
+.card-image {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.card-image img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* Greeting message */
+
+.card-message {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 25px 15px 18px;
+
+    color: white;
+
+    text-align: center;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.90)
+    );
+
+    overflow-wrap: break-word;
+}
+
+
+/* Main greeting */
+
+.card-message h3 {
+    margin: 0 0 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    color: #ffe66d;
+
+    overflow-wrap: break-word;
+
+    text-shadow: 2px 2px 5px black;
+}
+
+
+/* Greeting message */
+
+.card-message p {
+    margin: 0 auto;
+
+    max-width: 95%;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    overflow-wrap: break-word;
+
+    text-shadow: 1px 1px 4px black;
+}
+
+/* =========================
+   SENDER NAME BOX - COMPACT
+========================= */
+
+.sender-section {
+    max-width: 500px;
+    margin: 8px auto;
+    text-align: center;
+}
+
+.sender-section label {
+    display: block;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #4b1170;
+
+    margin-bottom: 5px;
+}
+
+#sender-name {
+    width: 80%;
+    max-width: 350px;
+
+    padding: 7px 12px;
+
+    font-size: 14px;
+
+    border: 2px solid #650b98;
+    border-radius: 8px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+#sender-name:focus {
+    border-color: #ffb300;
+}
+/* Name displayed on the card */
+
+.sender-on-card {
+    margin-top: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #ffe66d;
+
+    overflow-wrap: break-word;
+
+    text-shadow: 1px 1px 4px black;
+}
+
+/* =========================
+   CARD ACTION BUTTONS
+========================= */
+
+.card-actions {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+}
+.card-actions button {
+    flex: 1;
+
+    margin: 0;
+
+    padding: 11px 8px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+.download-button {
+    background-color: #650b98;
+
+    color: white;
+}
+
+
+.download-button:hover {
+    background-color: #4b1170;
+}
+.share-button {
+    background-color: #198754;
+
+    color: white;
+}
+
+
+.share-button:hover {
+    background-color: #146c43;
+}
+
+@media (max-width: 350px) {
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+}
+
+.card-actions button:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   LANGUAGE SELECTION - COMPACT
+========================= */
+
+.language-section {
+    text-align: center;
+    margin: 8px auto;
+}
+
+.language-section h3 {
+    color: #4b1170;
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.language-button {
+    padding: 6px 16px;
+    margin: 2px;
+
+    background-color: white;
+    color: #650b98;
+
+    border: 2px solid #650b98;
+    border-radius: 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.language-button:hover {
+    background-color: #f3e5ff;
+}
+
+.language-button.active-language {
+    background-color: #650b98;
+    color: white;
+}
+
+/* =========================
+   FESTIVAL DROPDOWN - COMPACT
+========================= */
+
+.festival-select-section {
+    max-width: 520px;
+    margin: 6px auto 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.festival-select-section label {
+    display: inline-block;
+
+    margin: 0;
+
+    color: #4b1170;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+#festival-select {
+    width: 210px;
+
+    padding: 6px 10px;
+
+    background-color: white;
+    color: #4b1170;
+
+    border: 2px solid #650b98;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+
+#festival-select:focus {
+    border-color: #ffb300;
+}
+
+/* ==========================
+   SEARCH GREETING CARDS
+   ========================== */
+
+.search-section {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 10px 20px;
+
+    background: #fff8ef;
+    border: 1px solid #ead7c2;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.search-section label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #6b2d5c;
+}
+
+#card-search {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 8px 12px;
+
+    font-size: 14px;
+
+    border: 2px solid #d9b38c;
+    border-radius: 8px;
+
+    background: white;
+
+    outline: none;
+}
+
+#card-search:focus {
+    border-color: #8b3a72;
+
+    box-shadow:
+        0 0 0 3px rgba(139, 58, 114, 0.12);
+}
+
+#card-search::placeholder {
+    color: #999;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .search-section {
+        margin: 8px 6px;
+        padding: 8px 10px;
+    }
+
+    .search-section label {
+        font-size: 14px;
+    }
+
+    #card-search {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+}
+/* ==========================
+   CLEAR SEARCH BUTTON
+   ========================== */
+
+#clear-search {
+    margin-top: 10px;
+    padding: 9px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #6b2d5c;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#clear-search:hover {
+    background: #8b3a72;
+    transform: translateY(-1px);
+}
+
+#clear-search:active {
+    transform: translateY(0);
+}
+
+/* ==========================
+   NO SEARCH RESULTS MESSAGE
+   ========================== */
+
+#no-search-results {
+    display: none;
+
+    margin: 15px auto 5px;
+    padding: 12px 15px;
+
+    max-width: 450px;
+
+    background: #fff3f3;
+    border: 1px solid #e8bcbc;
+    border-radius: 8px;
+
+    color: #9b3333;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+/* ==========================
+   BACK TO TOP BUTTON
+   ========================== */
+
+#back-to-top {
+
+    display: none;
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #6b2d5c;
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 9999;
+}
+
+/* ==========================
+   FAVORITE HEART BUTTON
+   ========================== */
+
+.ecard {
+    position: relative;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.92);
+    color: #c62828;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 20;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+    transition: 0.2s;
+}
+
+.favorite-button:hover {
+    transform: scale(1.12);
+    background: white;
+}
+
+.favorite-button:active {
+    transform: scale(0.95);
+}
+
+/* ==========================
+   MY FAVORITES BUTTON
+   ========================== */
+
+#show-favorites {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding: 9px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #c62828;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#show-favorites:hover {
+    background: #a91f1f;
+    transform: translateY(-1px);
+}
+
+#show-favorites:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+
+    #show-favorites {
+        margin-left: 5px;
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+}
+
+/* ==========================
+   NO FAVORITES MESSAGE
+   ========================== */
+
+#no-favorites-message {
+    display: none;
+
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px 20px;
+
+    background: #fff3f3;
+    border: 1px solid #e8bcbc;
+    border-radius: 10px;
+
+    color: #9b3333;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+/* ==========================
+   REMOVE ALL FAVORITES
+   ========================== */
+
+#clear-favorites {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding: 9px 18px;
+
+    border: 1px solid #c62828;
+    border-radius: 7px;
+
+    background: white;
+    color: #c62828;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#clear-favorites:hover {
+    background: #c62828;
+    color: white;
+}
+
+#clear-favorites:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+
+    #clear-favorites {
+        margin-left: 5px;
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+}
+
+/* ==========================
+   YOUTUBE SUBSCRIBE BUTTON
+========================== */
+
+.youtube-subscribe-section {
+    margin: 6px auto 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: nowrap;
+}
+
+.youtube-subscribe-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 8px 15px;
+
+    background: #ff0000;
+    color: white;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 8px
+        rgba(0, 0, 0, 0.2);
+
+    transition: 0.2s;
+}
+
+.youtube-subscribe-button span {
+    font-weight: 600;
+}
+
+.youtube-subscribe-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px
+        rgba(0, 0, 0, 0.25);
+}
+
+.youtube-subscribe-button:active {
+    transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .youtube-subscribe-section {
+        flex-direction: column;
+        gap: 5px;
+        margin: 6px auto;
+    }
+
+    .youtube-subscribe-button {
+        padding: 7px 12px;
+        font-size: 13px;
+    }
+
+    .youtube-subscribe-message {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.youtube-subscribe-message {
+    margin: 0;
+    max-width: none;
+    font-size: 13px;
+    color: #555;
+    text-align: left;
+    line-height: 1.3;
+}
+
+
+/* Small festival image inside festival tabs */
+
+.festival-icon {
+    width: 28px;
+    height: 28px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    margin-right: 7px;
+
+    vertical-align: middle;
+
+    border: 2px solid white;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.20);
+}
+
+@media (max-width: 600px) {
+
+    .festival-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .festival-tab {
+
+        gap: 6px;
+    }
+
+}
+/* =================================
+   LANGUAGE + SEARCH SIDE BY SIDE
+================================= */
+
+.language-search-row {
+    width: 100%;
+    max-width: 1000px;
+    margin: 8px auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.language-search-row .language-section {
+    width: 260px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.language-search-row .search-section {
+    width: 550px;
+    max-width: 550px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .language-search-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .language-search-row .language-section,
+    .language-search-row .search-section {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+/* =================================
+   COMPACT SEARCH GREETINGS
+================================= */
+
+.language-search-row .search-section {
+    padding: 8px 12px;
+}
+
+.language-search-row .search-section label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.language-search-row #card-search {
+    padding: 7px 10px;
+    font-size: 14px;
+}
+
+
+/* Search action buttons */
+
+#clear-search,
+#show-favorites,
+#clear-favorites {
+    margin-top: 7px;
+    margin-left: 4px;
+    margin-right: 4px;
+
+    padding: 7px 10px;
+
+    font-size: 12px;
+}
+
+
+/* Card count */
+
+#search-result-count {
+    display: inline-block;
+
+    margin: 8px 0 0;
+
+    font-size: 13px;
+}
+#card-container {
+    margin-top: 10px;
+}
+
+/* =================================
+   COMPACT CONTROL AREA
+================================= */
+
+.language-search-row {
+    max-width: 1100px;
+    gap: 12px;
+    align-items: center;
+}
+
+.language-search-row .language-section {
+    width: 220px;
+}
+
+.sender-section {
+    max-width: 260px;
+    margin: 6px 10px;
+}
+
+.language-search-row .search-section {
+    max-width: 500px;
+}
+/* =================================
+   FINAL CONTROL ROW ALIGNMENT
+================================= */
+
+.language-search-row {
+    max-width: 1150px;
+    margin: 6px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* LANGUAGE */
+
+.language-search-row .language-section {
+    width: 220px;
+    flex: 0 0 220px;
+}
+
+
+/* NAME */
+
+.language-search-row .sender-section {
+    width: 240px;
+    max-width: 240px;
+
+    flex: 0 0 240px;
+
+    margin: 0;
+}
+
+.language-search-row #sender-name {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* SEARCH */
+
+.language-search-row .search-section {
+    width: 500px;
+    max-width: 500px;
+
+    flex: 0 0 500px;
+
+    margin: 0;
+
+    padding: 7px 10px;
+}
+
+
+/* Make card count smaller */
+
+#search-result-count {
+    margin: 6px 0 0;
+    font-size: 12px;
+}
+/* =====================================
+   FINAL MOBILE LAYOUT FIX
+===================================== */
+
+@media (max-width: 700px) {
+
+    /* Main page */
+
+    main {
+        padding: 8px 10px;
+        overflow-x: hidden;
+    }
+
+
+    /* Header */
+
+    header {
+        padding: 12px 8px;
+        overflow: hidden;
+    }
+
+    header h1 {
+        font-size: 28px;
+        white-space: normal;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+
+    /* Language + Name + Search */
+
+    .language-search-row {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin: 8px auto;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Language */
+
+    .language-search-row .language-section {
+        width: 100%;
+        max-width: 100%;
+
+        flex: none;
+
+        margin: 0;
+    }
+
+
+    /* Name */
+
+    .language-search-row .sender-section {
+        width: 100%;
+        max-width: 100%;
+
+        flex: none;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+    .language-search-row #sender-name {
+        width: 90%;
+        max-width: 350px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Search */
+
+    .language-search-row .search-section {
+        width: 100%;
+        max-width: 100%;
+
+        flex: none;
+
+        margin: 0;
+
+        padding: 8px;
+
+        box-sizing: border-box;
+    }
+
+    #card-search {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Search buttons */
+
+    #clear-search,
+    #show-favorites,
+    #clear-favorites {
+        display: inline-block;
+
+        margin: 5px 2px;
+
+        padding: 7px 8px;
+
+        font-size: 11px;
+
+        white-space: normal;
+    }
+
+
+    /* Card count */
+
+    #search-result-count {
+        display: block;
+
+        margin: 5px 0 0;
+
+        font-size: 12px;
+    }
+
+
+    /* Festival heading */
+
+    #festival-title {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+
+}
+/* =====================================
+   EXTRA COMPACT MOBILE CONTROLS
+===================================== */
+
+@media (max-width: 700px) {
+
+    /* Festival heading */
+    #festival-title {
+        font-size: 20px;
+        margin: 6px 0 8px;
+    }
+
+
+    /* Language */
+    .language-section h3 {
+        font-size: 15px;
+        margin: 0 0 4px;
+    }
+
+    .language-button {
+        padding: 5px 12px;
+        font-size: 13px;
+        margin: 2px;
+    }
+
+
+    /* Name */
+    .sender-section label {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .language-search-row #sender-name {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+
+    /* Reduce gaps between controls */
+    .language-search-row {
+        gap: 7px;
+    }
+
+
+    /* Search box */
+    .language-search-row .search-section {
+        padding: 7px;
+        border-radius: 9px;
+    }
+
+    .language-search-row .search-section label {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .language-search-row #card-search {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+
+    /* Search/Favorite buttons */
+    #clear-search,
+    #show-favorites,
+    #clear-favorites {
+        padding: 6px 7px;
+        margin: 4px 2px;
+        font-size: 11px;
+    }
+
+
+    /* Count */
+    #search-result-count {
+        margin: 4px 0 0;
+        font-size: 11px;
+    }
+}
+/* =====================================
+   COMPACT MOBILE TOP AREA
+===================================== */
+
+@media (max-width: 700px) {
+
+    /* YouTube area */
+    .youtube-subscribe-section {
+        margin: 5px auto 7px;
+        gap: 4px;
+    }
+
+    .youtube-subscribe-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .youtube-subscribe-message {
+        margin: 0;
+        padding: 0 5px;
+
+        font-size: 11px;
+        line-height: 1.25;
+
+        text-align: center;
+    }
+
+
+    /* Festival dropdown */
+    .festival-select-section {
+        margin: 5px auto 6px;
+        gap: 5px;
+    }
+
+    #festival-select {
+        width: 190px;
+
+        padding: 5px 8px;
+
+        font-size: 12px;
+    }
+
+
+    /* Festival tab strip */
+    .festival-tabs {
+        gap: 6px;
+
+        padding: 6px 3px;
+
+        margin-bottom: 5px;
+    }
+
+    .festival-tab {
+        min-width: 115px;
+
+        padding: 6px 9px;
+
+        font-size: 12px;
+
+        border-radius: 12px;
+    }
+
+    .festival-icon {
+        width: 25px;
+        height: 25px;
+
+        margin-right: 3px;
+    }
+}
+/* =====================================
+   SHARE WEBSITE BUTTON
+===================================== */
+
+#share-website-button {
+    padding: 8px 15px;
+
+    background: #650b98;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+
+    transition: 0.2s;
+}
+
+#share-website-button:hover {
+    background: #4b1170;
+    transform: translateY(-1px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    #share-website-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+}
+/* =====================================
+   WEBSITE FOOTER
+===================================== */
+
+.site-footer {
+    margin-top: 30px;
+    padding: 22px 15px 18px;
+
+    background: linear-gradient(
+        135deg,
+        #18002e,
+        #650b98
+    );
+
+    color: white;
+    text-align: center;
+}
+
+.footer-brand h3 {
+    margin: 0 0 5px;
+
+    color: #ffdf3e;
+
+    font-size: 24px;
+}
+
+.footer-brand p {
+    margin: 0 0 12px;
+
+    font-size: 14px;
+}
+
+
+/* Social links */
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #ffdf3e;
+}
+
+
+/* Description */
+
+.footer-description {
+    max-width: 600px;
+
+    margin: 10px auto;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #f3eafa;
+}
+
+
+/* Copyright */
+
+.footer-copyright {
+    margin: 12px 0 0;
+
+    padding-top: 10px;
+
+    border-top: 1px solid
+        rgba(255,255,255,0.25);
+
+    font-size: 12px;
+
+    color: #e6d9ef;
+}
+
+
+/* =====================================
+   MOBILE FOOTER
+===================================== */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+        margin-top: 20px;
+
+        padding: 16px 10px 14px;
+    }
+
+    .footer-brand h3 {
+        font-size: 20px;
+    }
+
+    .footer-brand p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .footer-links {
+        margin: 7px 0;
+        gap: 9px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-description {
+        font-size: 11px;
+
+        margin: 7px auto;
+
+        line-height: 1.4;
+    }
+
+    .footer-copyright {
+        margin-top: 8px;
+
+        padding-top: 8px;
+
+        font-size: 10px;
+    }
+
+}
+
+/* =====================================
+   MATCHING LANGUAGE / NAME / SEARCH
+===================================== */
+
+/* All 3 sections use the same card design */
+
+.language-search-row .language-section,
+.language-search-row .sender-section,
+.language-search-row .search-section {
+    background: #ffffff;
+
+    border: 1px solid #d8c6eb;
+    border-radius: 14px;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 3px 10px rgba(75, 17, 112, 0.08);
+}
+
+
+/* Same heading style */
+
+.language-section h3,
+.sender-section label,
+.search-section label {
+    display: block;
+
+    color: #4b1170;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    margin: 0 0 8px;
+
+    text-align: center;
+}
+
+
+/* Name + Search inputs match */
+
+#sender-name,
+#card-search {
+    height: 40px;
+
+    background: #ffffff;
+
+    border: 2px solid #b995d1;
+    border-radius: 9px;
+
+    color: #241239;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+
+#sender-name:focus,
+#card-search:focus {
+    border-color: #650b98;
+
+    box-shadow: 0 0 0 2px rgba(101, 11, 152, 0.10);
+}
+
+
+/* Language buttons */
+
+.language-button {
+    background: #ffffff;
+
+    color: #650b98;
+
+    border: 2px solid #650b98;
+
+    border-radius: 9px;
+
+    padding: 7px 15px;
+
+    font-size: 13px;
+}
+
+
+/* Selected language */
+
+.language-button.active-language {
+    background: #650b98;
+    color: #ffffff;
+}
+
+
+/* Search / Favorite buttons */
+
+#clear-search,
+#show-favorites,
+#clear-favorites {
+    background: #650b98;
+
+    color: #ffffff;
+
+    border: 2px solid #650b98;
+    border-radius: 8px;
+
+    padding: 7px 10px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Hover */
+
+#clear-search:hover,
+#show-favorites:hover,
+#clear-favorites:hover {
+    background: #4b1170;
+    border-color: #4b1170;
+}
+
+
+/* Card count */
+
+#search-result-count {
+    color: #4b1170;
+    font-weight: bold;
+}
+
+/* =====================================
+   FINAL DESKTOP CONTROL ALIGNMENT
+===================================== */
+
+@media (min-width: 701px) {
+
+    .language-search-row {
+        align-items: flex-start;
+    }
+
+    .language-search-row .language-section,
+.language-search-row .search-section,
+.language-search-row .sender-section {
+    height: 145px;
+    min-height: 145px;
+    box-sizing: border-box;
+}
+
+    .language-section h3,
+    .sender-section label,
+    .search-section label {
+        min-height: 20px;
+    }
+
+}
+/* =====================================
+   DESKTOP CONTROL ORDER
+   Language | Search | Name
+===================================== */
+
+@media (min-width: 701px) {
+
+    .language-search-row .language-section {
+        order: 1;
+    }
+
+    .language-search-row .search-section {
+        order: 2;
+    }
+
+    .language-search-row .sender-section {
+        order: 3;
+    }
+
+}
+/* =====================================
+   CLEAN TOP SOCIAL / SHARE SECTION
+===================================== */
+
+.youtube-subscribe-section {
+    max-width: 900px;
+    margin: 8px auto 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    text-align: center;
+}
+
+
+/* YouTube button */
+
+.youtube-subscribe-button {
+    padding: 8px 14px;
+
+    font-size: 13px;
+
+    border-radius: 9px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+/* Share Website button */
+
+#share-website-button {
+    padding: 8px 14px;
+
+    font-size: 13px;
+
+    border-radius: 9px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+/* Message moves to its own line */
+
+.youtube-subscribe-message {
+    flex-basis: 100%;
+
+    margin: 2px 0 0;
+
+    text-align: center;
+
+    color: #5d4a68;
+
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .youtube-subscribe-section {
+        gap: 6px;
+        margin: 5px auto 7px;
+    }
+
+    .youtube-subscribe-button,
+    #share-website-button {
+        padding: 6px 9px;
+        font-size: 11px;
+    }
+
+    .youtube-subscribe-message {
+        font-size: 10px;
+        margin-top: 1px;
+    }
+
+}
+/* =====================================
+   FESTIVAL TAB SCROLLBAR
+===================================== */
+
+.festival-tabs {
+    scrollbar-width: thin;
+    scrollbar-color: #8e44ad #eee5f5;
+}
+
+
+/* Chrome, Edge and Safari */
+
+.festival-tabs::-webkit-scrollbar {
+    height: 6px;
+}
+
+.festival-tabs::-webkit-scrollbar-track {
+    background: #eee5f5;
+    border-radius: 10px;
+}
+
+.festival-tabs::-webkit-scrollbar-thumb {
+    background: #8e44ad;
+    border-radius: 10px;
+}
+
+.festival-tabs::-webkit-scrollbar-thumb:hover {
+    background: #650b98;
+}
+/* =====================================
+   DESKTOP LANGUAGE BUTTONS SIDE BY SIDE
+===================================== */
+
+@media (min-width: 701px) {
+
+    .language-section {
+        text-align: center;
+    }
+
+    .language-section .language-button {
+        display: inline-block;
+
+        width: auto;
+        min-width: 105px;
+
+        margin: 2px 3px;
+
+        padding: 7px 12px;
+    }
+
+}
+
+/* =====================================
+   FORCE DESKTOP LANGUAGE BUTTONS
+   SIDE BY SIDE
+===================================== */
+
+@media (min-width: 701px) {
+
+    .language-search-row .language-section {
+        display: block !important;
+        text-align: center;
+    }
+
+    .language-search-row .language-section h3 {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .language-search-row .language-section .language-button {
+        display: inline-block !important;
+
+        width: 85px !important;
+        min-width: 0 !important;
+
+        margin: 2px 3px !important;
+
+        padding: 7px 8px !important;
+
+        box-sizing: border-box;
+    }
+
+}
+/* =====================================
+   REDUCE TOP EMPTY SPACE
+===================================== */
+
+.youtube-subscribe-section {
+    margin-bottom: 4px;
+}
+
+.festival-select-section {
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.festival-tabs {
+    margin-top: 4px;
+    margin-bottom: 5px;
+}
+/* =====================================
+   HOW TO USE INSTRUCTIONS
+===================================== */
+
+.card-instructions {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-instructions strong {
+    display: block;
+    color: #650b98;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.card-instructions p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .card-instructions p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+}
+
+/* =====================================
+   FAVORITES CLEAN CENTERED LAYOUT
+===================================== */
+
+.language-search-row .search-section {
+    text-align: center;
+}
+
+/* How to Use */
+
+.language-search-row .card-instructions {
+    margin: 0 0 6px;
+}
+
+.language-search-row .card-instructions strong {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.language-search-row .card-instructions p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Keep both favorite buttons together */
+
+.favorites-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 5px;
+}
+
+.favorites-buttons #show-favorites,
+.favorites-buttons #clear-favorites {
+    margin: 0 !important;
+    padding: 7px 12px;
+}
+
+/* Put card count underneath */
+
+#search-result-count {
+    display: block !important;
+    width: 100%;
+    margin: 5px 0 0 !important;
+
+    text-align: center;
+    font-size: 11px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .favorites-buttons {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .favorites-buttons #show-favorites,
+    .favorites-buttons #clear-favorites {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+}
+
+/* =====================================
+   COMPACT TOP AREA
+===================================== */
+
+.youtube-subscribe-section {
+    margin-top: 3px !important;
+    margin-bottom: 2px !important;
+    gap: 8px !important;
+}
+
+.youtube-subscribe-message {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.1 !important;
+}
+
+.festival-select-section {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+/* Reduce dropdown height slightly */
+#festival-select {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/* =====================================
+   TOP ACTION ROW WITH FESTIVAL DROPDOWN
+===================================== */
+
+.youtube-subscribe-section .festival-select-section {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none;
+}
+
+.youtube-subscribe-section #festival-select {
+    width: 180px;
+    height: 38px;
+    padding: 5px 10px;
+    margin: 0;
+
+    font-size: 13px;
+}
+
+/* Keep top controls aligned */
+.youtube-subscribe-section {
+    align-items: center;
+    gap: 10px;
+}
+
+/* Message stays on second line */
+.youtube-subscribe-message {
+    flex-basis: 100%;
+    margin: 2px 0 0 !important;
+}
+/* =====================================
+   FESTIVAL LEFT - SOCIAL BUTTONS CENTER
+===================================== */
+
+@media (min-width: 701px) {
+
+    .youtube-subscribe-section {
+        max-width: 1400px;
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(320px, 1fr)
+            auto
+            minmax(320px, 1fr);
+
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    /* Festival selector - left */
+
+    .youtube-subscribe-section .festival-select-section {
+        grid-column: 1;
+        grid-row: 1;
+
+        position: static !important;
+
+       display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+gap: 4px;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .youtube-subscribe-section .festival-select-section label {
+    width: 165px;
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #4b1170;
+}
+
+    .youtube-subscribe-section #festival-select {
+        width: 165px;
+        margin: 0;
+    }
+
+    /* YouTube */
+
+    .youtube-subscribe-button {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* Share button */
+
+    #share-website-button {
+        grid-column: 3;
+        grid-row: 1;
+
+        justify-self: start;
+    }
+
+    /* Message underneath */
+
+    .youtube-subscribe-message {
+        grid-column: 1 / 4;
+        grid-row: 2;
+
+        text-align: center;
+        margin-top: 5px !important;
+    }
+
+}
+
+/* =====================================
+   SUPPORT US POPUP
+===================================== */
+
+.support-popup {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 9999;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Popup box */
+
+.support-popup-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 400px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 28px 22px 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* Heading */
+
+.support-popup-box h2 {
+    margin: 0 0 12px;
+
+    color: #650b98;
+
+    font-size: 24px;
+}
+
+
+/* Text */
+
+.support-popup-box p {
+    margin: 7px 0;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* YouTube button */
+
+.support-youtube-button {
+    display: block;
+
+    margin: 18px auto 10px;
+
+    padding: 11px 16px;
+
+    background: #ff0000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* Continue button */
+
+.support-continue-button {
+    width: 100%;
+
+    padding: 10px 16px;
+
+    background: #650b98;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Close X */
+
+.support-close {
+    position: absolute;
+
+    top: 8px;
+    right: 12px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #777;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .support-popup-box {
+        max-width: 330px;
+
+        padding:
+            25px 18px
+            18px;
+    }
+
+    .support-popup-box h2 {
+        font-size: 21px;
+    }
+
+}

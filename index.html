@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Festival Greeting Cards | Allrounder Grihani
+    </title>
+
+    <meta
+        name="description"
+        content="Beautiful festival greeting cards by Allrounder Grihani. Personalize cards with your name, download them and share with family and friends."
+    >
+
+    <meta
+        name="keywords"
+        content="festival greeting cards, e-cards, Indian festival cards, Hindi greeting cards, English greeting cards, Deepawali cards, Durga Puja cards, Chhath Puja cards, Holi cards, Eid cards, Christmas cards, New Year cards, Raksha Bandhan cards"
+    >
+
+    <meta
+        name="author"
+        content="Allrounder Grihani"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+<!-- =====================================
+     SOCIAL MEDIA SHARING PREVIEW
+===================================== -->
+
+<meta
+    property="og:title"
+    content="Festival Greeting Cards | Allrounder Grihani"
+>
+
+<meta
+    property="og:description"
+    content="Beautiful festival greeting cards. Add your name, download your favorite card and share happiness with family and friends."
+>
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    property="og:site_name"
+    content="Allrounder Grihani"
+>
+
+<meta
+    property="og:image"
+    content="assets/ag-share-preview.png"
+>
+    
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png?v=3">
+<link rel="shortcut icon" type="image/png" href="/assets/favicon.png?v=3">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Allrounder Grihani</h1>
+
+        <h2>Festival Greeting Cards</h2>
+
+        <p>Share Happiness. Spread Love.</p>
+    </header>
+
+    
+<div class="youtube-subscribe-section">
+
+    <a
+        href="https://www.youtube.com/@AllrounderGrihani"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="youtube-subscribe-button"
+    >
+        ▶ YouTube &nbsp; SUBSCRIBE
+        <span>@AllrounderGrihani</span>
+    </a>
+
+
+    <button
+        type="button"
+        id="share-website-button"
+        onclick="shareWebsite()"
+    >
+        🔗 Share Website
+    </button>
+
+    <div class="festival-select-section">
+
+       
+        <select
+            id="festival-select"
+            onchange="selectFestivalFromDropdown()"
+        >
+            <option value="deepawali">Deepawali</option>
+            <option value="durga">Durga Puja</option>
+            <option value="chhath">Chhath Puja</option>
+            <option value="karwa">Karwa Chauth</option>
+            <option value="christmas">Christmas</option>
+            <option value="eid">Eid</option>
+            <option value="newyear">New Year</option>
+            <option value="janmashtami">Janmashtami</option>
+            <option value="holi">Holi</option>
+            <option value="pongal">Pongal</option>
+            <option value="gurupurnima">Guru Purnima</option>
+            <option value="rakhi">Raksha Bandhan</option>
+            <option value="independence">Independence Day</option>
+            <option value="republic">Republic Day</option>
+            <option value="bhaidooj">Bhai Dooj</option>
+            <option value="teej">Teej</option>
+        </select>
+
+    </div>
+
+    <p class="youtube-subscribe-message">
+    ❤️ Subscribe & Share AG for More Beautiful Creations!
+</p>
+
+</div>
+
+    <main>
+
+<div class="festival-tabs">
+
+    <button class="festival-tab active"
+            data-festival="deepawali"  
+            onclick="showFestival('deepawali', this)">
+
+            <img
+    src="assets/deepawali/card-01.jpg"
+    class="festival-icon"
+    alt=""
+>
+        Deepawali
+    </button>
+
+    <button class="festival-tab"
+            data-festival="durga"
+            onclick="showFestival('durga', this)">
+            <img src="assets/durga/card-01.jpg" class="festival-icon" alt="">
+        Durga Puja
+    </button>
+
+    <button class="festival-tab"
+            data-festival="chhath"
+            onclick="showFestival('chhath', this)">
+            <img src="assets/chhath/card-01.jpg" class="festival-icon" alt="">
+        Chhath Puja
+    </button>
+
+    <button class="festival-tab"
+            data-festival="karwa"
+            onclick="showFestival('karwa', this)">
+            <img src="assets/karwa/card-01.jpg" class="festival-icon" alt="">
+        Karwa Chauth
+    </button>
+
+    <button class="festival-tab"
+            data-festival="christmas"
+            onclick="showFestival('christmas', this)">
+            <img src="assets/christmas/card-01.jpg" class="festival-icon" alt="">
+        Christmas
+    </button>
+
+    <button class="festival-tab"
+            data-festival="eid"
+            onclick="showFestival('eid', this)">
+            <img src="assets/eid/card-01.jpg" class="festival-icon" alt="">
+        Eid
+    </button>
+
+    <button class="festival-tab"
+            data-festival="newyear"
+            onclick="showFestival('newyear', this)">
+            <img src="assets/newyear/card-01.jpg" class="festival-icon" alt="">
+        New Year
+    </button>
+
+    <button class="festival-tab"
+            data-festival="janmashtami"
+            onclick="showFestival('janmashtami', this)">
+            <img src="assets/janmashtami/card-01.jpg" class="festival-icon" alt="">
+        Janmashtami
+    </button>
+
+    <button class="festival-tab"
+            data-festival="holi"
+            onclick="showFestival('holi', this)">
+            <img src="assets/holi/card-01.jpg" class="festival-icon" alt="">
+        Holi
+    </button>
+
+    <button class="festival-tab"
+            data-festival="pongal" 
+            onclick="showFestival('pongal', this)">
+            <img src="assets/pongal/card-01.jpg" class="festival-icon" alt="">
+        Pongal
+    </button>
+
+    <button class="festival-tab"
+            data-festival="gurupurnima"
+            onclick="showFestival('gurupurnima', this)">
+            <img src="assets/gurupurnima/card-01.jpg" class="festival-icon" alt="">
+        Guru Purnima
+    </button>
+
+    <button class="festival-tab"
+            data-festival="rakhi"
+            onclick="showFestival('rakhi', this)">
+            <img src="assets/rakhi/card-01.jpg" class="festival-icon" alt="">
+        Rakhi
+    </button>
+
+    <button class="festival-tab"
+            data-festival="independence"
+            onclick="showFestival('independence', this)">
+            <img src="assets/independence/card-01.jpg" class="festival-icon" alt="">
+        India Independence Day
+    </button>
+
+    <button class="festival-tab"
+            data-festival="republic"
+            onclick="showFestival('republic', this)">
+            <img src="assets/republic/card-01.jpg" class="festival-icon" alt="">
+        India Republic Day
+    </button>
+
+    <button class="festival-tab"
+            data-festival="bhaidooj"
+            onclick="showFestival('bhaidooj', this)">
+            <img src="assets/bhaidooj/card-01.jpg" class="festival-icon" alt="">
+            Bhai Dooj
+    </button>
+
+    <button class="festival-tab"
+            data-festival="teej"
+            onclick="showFestival('teej', this)">
+            <img src="assets/teej/card-01.jpg" class="festival-icon" alt="">
+        Teej
+    </button>
+
+</div>
+
+
+<h2 id="festival-title">
+    Deepawali Greeting Cards
+</h2>
+
+<div class="language-search-row">
+
+<div class="language-section">
+
+    <h3>Choose Language</h3>
+
+    <button
+        class="language-button active-language"
+        onclick="changeLanguage('english', this)"
+    >
+        English
+    </button>
+
+    <button
+        class="language-button"
+        onclick="changeLanguage('hindi', this)"
+    >
+        हिंदी
+    </button>
+
+</div>
+
+
+<div class="sender-section">
+
+    <label for="sender-name">
+        Add Your Name
+    </label>
+
+    <input
+        type="text"
+        id="sender-name"
+        placeholder="Enter your name"
+        maxlength="40"
+    >
+
+</div>
+
+
+<div class="search-section">
+
+<div class="card-instructions">
+    <strong>How to Use</strong>
+    <p>
+    🌐 Choose Language →
+    🎉 Select Festival →
+    ✍️ Write Your Name
+    <br>
+    🎴 Choose a Card →
+    📲 Download or Share
+</p>
+</div>
+
+
+<div class="favorites-buttons">
+
+    <button
+        id="show-favorites"
+        type="button"
+    >
+        ❤️ My Favorites
+    </button>
+
+    <button
+        id="clear-favorites"
+        type="button"
+    >
+        🗑️ Remove All Favorites
+    </button>
+
+</div>
+
+<p id="search-result-count">
+    100 cards available
+</p>
+
+<p id="no-search-results">
+    🔍 No greeting cards found. Try another search.
+</p>
+
+</div>
+</div>
+
+
+<p id="no-favorites-message">
+    ❤️ You haven't saved any favorite cards for this festival yet.
+</p>
+
+
+
+<!-- Your existing normal cards -->
+<div id="card-container">
+
+</div>
+
+    </main>
+
+<button
+    id="back-to-top"
+    type="button"
+    title="Back to top"
+>
+    ↑
+</button>
+
+↑
+</button>
+
+
+<!-- =================================
+     WEBSITE FOOTER
+================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-brand">
+
+        <h3>
+            Allrounder Grihani
+        </h3>
+
+        <p>
+            ❤️ Share Happiness. Spread Love. ❤️
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+    <a
+        href="https://www.youtube.com/@AllrounderGrihani"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        ▶ YouTube
+    </a>
+
+    <span>•</span>
+
+    <a
+        href="https://www.instagram.com/allroundergrihani/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        📷 Instagram
+    </a>
+
+<span>•</span>
+
+<a
+    href="https://www.instagram.com/dil_ne_kuch_kaha_hai"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    📷 Instagram – Dil Ne Kuch Kaha Hai
+</a>
+
+    <span>•</span>
+
+    <a
+        href="https://www.facebook.com/Allroundergrihani"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Facebook – Allrounder Grihani
+    </a>
+
+    <span>•</span>
+
+    <a
+        href="https://www.facebook.com/share/19jhAG4aqQ/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Facebook – AG Dil Se
+    </a>
+
+    <span>•</span>
+
+    <a
+        href="https://www.facebook.com/share/184aAh8iwr/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Facebook – AG Rasoi
+    </a>
+
+</div>
+
+
+    <p class="footer-description">
+        Beautiful festival greeting cards to personalize,
+        download and share with your loved ones.
+    </p>
+
+
+    <p class="footer-copyright">
+        © 2026 Allrounder Grihani. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<script src="messages.js"></script>
+
+    <script src="messages.js"></script>
+
+
+    <script src="messages/deepawali.js"></script>
+    <script src="messages/christmas.js"></script>
+    <script src="messages/durga.js"></script>
+    <script src="messages/chhath.js"></script>
+    <script src="messages/karwa.js"></script>
+    <script src="messages/eid.js"></script>
+    <script src="messages/newyear.js"></script>
+    <script src="messages/janmashtami.js"></script>
+    <script src="messages/holi.js"></script>
+    <script src="messages/pongal.js"></script>
+    <script src="messages/gurupurnima.js"></script>
+    <script src="messages/rakhi.js"></script>
+    <script src="messages/independence.js"></script>
+    <script src="messages/republic.js"></script>
+    <script src="messages/bhaidooj.js"></script>
+    <script src="messages/teej.js"></script>
+
+
+
+    <script src="script.js"></script>
+
+
+<!-- =====================================
+     SUPPORT US POPUP
+===================================== -->
+
+<div id="support-popup" class="support-popup">
+
+    <div class="support-popup-box">
+
+        <button
+            type="button"
+            class="support-close"
+            onclick="closeSupportPopup()"
+        >
+            ×
+        </button>
+
+        <h2>❤️ Support Us</h2>
+
+        <p>
+            Enjoying our free greeting cards?
+        </p>
+
+        <p>
+            Please support
+            <strong>Allrounder Grihani</strong>
+            by subscribing to our YouTube channel.
+        </p>
+
+        <a
+            href="https://www.youtube.com/@AllrounderGrihani"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="support-youtube-button"
+        >
+            ▶ Subscribe on YouTube
+        </a>
+
+        <button
+            type="button"
+            id="support-continue-button"
+            class="support-continue-button"
+        >
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
