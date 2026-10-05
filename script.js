@@ -8,6 +8,14 @@ const TOTAL_CARDS = 100;
 let currentLanguage = "english";
 let currentFestival = "deepawali";
 
+// Read festival from URL
+const urlParams = new URLSearchParams(window.location.search);
+const festivalFromURL = urlParams.get("festival");
+
+if (festivalFromURL) {
+    currentFestival = festivalFromURL;
+}
+
 // ==========================
 // cards message 
 // ==========================
@@ -460,7 +468,8 @@ setTimeout(function () {
 
 }
 
-loadCards("deepawali");
+updateFestivalSelection(currentFestival);
+loadCards(currentFestival);
 
 
 const senderInput =
@@ -1043,12 +1052,10 @@ function selectFestivalFromDropdown() {
     updateFestivalSelection(
         festival
     );
-
     loadCards(festival);
     updateFavoriteButtonCount();
 
 }
-
 function updateFestivalSelection(festival) {
 
     const festivalButtons =
@@ -1059,31 +1066,23 @@ function updateFestivalSelection(festival) {
         function (button) {
 
             button.classList.remove("active");
-
         }
     );
-
-
     const selectedButton =
         document.querySelector(
             `.festival-tab[data-festival="${festival}"]`
         );
-
 
     if (selectedButton) {
 
         selectedButton.classList.add(
             "active"
         );
-
     }
-
-
     const dropdown =
         document.getElementById(
             "festival-select"
         );
-
 
     if (dropdown) {
 
