@@ -4,8 +4,70 @@
 
     <url>
         <loc>https://allroundergrihani.github.io/festival-greeting-cards/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=deepawali</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=durga</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=chhath</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=karwa</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=christmas</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=eid</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=newyear</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=janmashtami</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=holi</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=pongal</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=gurupurnima</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=rakhi</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=independence</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=republic</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=bhaidooj</loc>
+    </url>
+
+    <url>
+        <loc>https://allroundergrihani.github.io/festival-greeting-cards/?festival=teej</loc>
     </url>
 
 </urlset>
